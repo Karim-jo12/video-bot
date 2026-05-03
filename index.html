@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Video Bot</title>
+</head>
+<body>
+
+<h1>🎬 Video Bot</h1>
+
+<button onclick="startBot()">Start Bot</button>
+<button onclick="checkStatus()">Check Status</button>
+
+<script>
+function startBot() {
+  fetch("https://YOUR-RENDER-URL.onrender.com/start")
+    .then(r => r.json())
+    .then(d => alert(d.message));
+}
+
+function checkStatus() {
+  fetch("https://YOUR-RENDER-URL.onrender.com/status")
+    .then(r => r.json())
+    .then(d => alert(JSON.stringify(d)));
+}
+</script>
+
+</body>
+</html>
